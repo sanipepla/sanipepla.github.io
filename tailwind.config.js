@@ -53,9 +53,24 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			},
             sanipepla: {
-                green: '#2ECC71',
-                blue: '#3498DB',
-            }
+                indigo: '#2D3A82',
+                mauve: '#CE7EAF',
+                muted: '#F8FAFC',
+            },
+            animation: {
+                'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                'fade-in': 'fadeIn 1s ease-out forwards',
+            },
+            keyframes: {
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+            },
   		}
   	}
   },
