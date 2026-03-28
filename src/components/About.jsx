@@ -19,7 +19,7 @@ export default function About() {
 
           {/* Core Story Card — no animation delay so text is always visible */}
           <div className="bg-slate-50 rounded-3xl border border-slate-100 shadow-sm p-12 md:p-20 text-center">
-            <p className="text-xl md:text-2xl font-light text-slate-700 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-800 leading-relaxed max-w-3xl mx-auto">
               SaniPepla is a sanitation innovation enterprise committed to providing smart, sustainable, and scalable solutions for underserved communities. SaniPepla believes in sanitation that serves the People, protects the Planet, and harnesses innovation for lasting impact.
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function About() {
             <img
               src="/logos/SANIPEPLA logo 1.png"
               alt="Sanipepla"
-              className="h-16 w-auto mx-auto opacity-30 hover:opacity-80 transition-opacity duration-700"
+              className="h-16 w-auto mx-auto"
             />
           </div>
         </div>

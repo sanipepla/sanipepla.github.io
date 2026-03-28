@@ -44,7 +44,7 @@ export default function Stats() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
-            Our Current State: <span className="text-sanipepla-indigo underline decoration-sanipepla-mauve/30">Challenge</span>
+            Our Current State: <span className="text-sanipepla-indigo underline decoration-sanipepla-mauve/60">Challenge</span>
           </h2>
           <div className="w-20 h-1.5 bg-sanipepla-mauve rounded-full mx-auto" />
         </div>
@@ -63,7 +63,7 @@ export default function Stats() {
                 <span className="text-4xl md:text-5xl font-bold text-slate-900 block tracking-tighter tabular-nums">
                   {stat.number}
                 </span>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed max-w-[180px] mx-auto">
+                <p className="text-slate-700 text-sm font-medium leading-relaxed max-w-[180px] mx-auto">
                   {stat.label}
                 </p>
               </div>

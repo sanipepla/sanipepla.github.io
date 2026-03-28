@@ -16,7 +16,7 @@ export default function Hero() {
               Sanitation for <span className="text-sanipepla-indigo italic">people</span>, <br />
               solutions for <span className="text-sanipepla-mauve italic">planet</span>
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed font-light max-w-xl">
+            <p className="text-xl text-slate-800 leading-relaxed max-w-xl">
               To design and deliver innovative, sustainable, socially- and environmentally-conscious scalable sanitation solutions that serve communities and transform waste into value.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function Hero() {
             </a>
             <a 
               href="#about" 
-              className="w-full sm:w-auto px-10 h-16 rounded-full font-bold flex items-center justify-center gap-3 border-2 border-slate-100 text-slate-600 hover:bg-slate-50 transition-all hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto px-10 h-16 rounded-full font-bold flex items-center justify-center gap-3 border-2 border-slate-300 text-slate-800 hover:bg-slate-50 transition-all hover:scale-105 active:scale-95"
             >
               Our Story
             </a>

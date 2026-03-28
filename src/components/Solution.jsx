@@ -44,7 +44,7 @@ export default function Solution() {
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tight">
                 The Sanipepla <span className="text-sanipepla-mauve italic">Model</span>
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed font-light">
+              <p className="text-lg text-slate-800 leading-relaxed">
                 Built within a modified commuter bus, the Sanipepla toilet model is an eco-friendly, self-contained mobile sanitation unit that integrates water recycling technology, waste separation, and locally sourced materials to deliver high-impact, environmentally conscious sanitation services.
               </p>
             </div>
@@ -57,12 +57,12 @@ export default function Solution() {
               <div className="grid gap-8">
                 {highlights.map((item, i) => (
                   <div key={i} className="flex gap-6 group hover:translate-x-1 transition-transform">
-                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-100 text-sanipepla-indigo flex items-center justify-center shrink-0 shadow-sm group-hover:bg-sanipepla-indigo group-hover:text-white transition-all duration-500">
+                    <div className="w-14 h-14 rounded-2xl bg-sanipepla-indigo/5 border border-slate-200 text-sanipepla-indigo flex items-center justify-center shrink-0 shadow-sm group-hover:bg-sanipepla-indigo group-hover:text-white transition-all duration-500">
                       <item.icon className="w-7 h-7" />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h4>
-                      <p className="text-slate-500 leading-relaxed text-sm font-medium">
+                      <p className="text-slate-700 leading-relaxed text-sm font-medium">
                         {item.description}
                       </p>
                     </div>

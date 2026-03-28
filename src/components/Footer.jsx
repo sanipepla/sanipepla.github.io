@@ -45,7 +45,7 @@ export default function Footer() {
               </div>
             </a>
             
-            <p className="text-slate-400 text-lg font-light leading-relaxed max-w-sm">
+            <p className="text-slate-300 text-lg font-light leading-relaxed max-w-sm">
               Sanitation for people, solutions for planet
             </p>
             
@@ -54,7 +54,7 @@ export default function Footer() {
                 <a 
                   key={i} 
                   href="#" 
-                  className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 hover:bg-sanipepla-mauve hover:text-white transition-all duration-300"
+                  className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/10 border border-white/20 hover:bg-sanipepla-mauve hover:text-white transition-all duration-300"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -74,7 +74,7 @@ export default function Footer() {
                     <li key={j}>
                       <a 
                         href={link.href} 
-                        className="text-slate-400 hover:text-white transition-colors flex items-center group"
+                        className="text-slate-300 hover:text-white transition-colors flex items-center group"
                       >
                         <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-sanipepla-mauve" />
                         {link.name}
@@ -88,11 +88,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-slate-500 text-sm font-medium">
+        <div className="pt-12 border-t border-white/15 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-slate-400 text-sm font-medium">
             © 2026 Sanipepla. All rights reserved.
           </p>
-          <div className="inline-flex items-center gap-2 text-sanipepla-mauve text-sm font-bold opacity-50">
+          <div className="inline-flex items-center gap-2 text-sanipepla-mauve text-sm font-bold">
             <Heart className="w-4 h-4 fill-current" />
             Sanitation, people, planet
           </div>
