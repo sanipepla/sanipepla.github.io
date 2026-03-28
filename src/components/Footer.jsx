@@ -46,7 +46,7 @@ export default function Footer() {
             </a>
             
             <p className="text-slate-400 text-lg font-light leading-relaxed max-w-sm">
-              Sanitation for people, solutions for planet. Providing smart, sustainable, and scalable solutions for underserved communities.
+              Sanitation for people, solutions for planet
             </p>
             
             <div className="flex gap-4">
@@ -94,7 +94,7 @@ export default function Footer() {
           </p>
           <div className="inline-flex items-center gap-2 text-sanipepla-mauve text-sm font-bold opacity-50">
             <Heart className="w-4 h-4 fill-current" />
-            Empowering Communities
+            Sanitation, people, planet
           </div>
         </div>
       </div>

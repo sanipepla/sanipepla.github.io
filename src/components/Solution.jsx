@@ -25,7 +25,7 @@ export default function Solution() {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Image Side */}
-          <div className="relative group animate-fade-in delay-200 opacity-0 [animation-fill-mode:forwards]">
+          <div className="relative group">
             <div className="relative z-10 rounded-[4rem] overflow-hidden shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
               <img 
                 src="/images/SANIPEPLA 1.jpeg" 

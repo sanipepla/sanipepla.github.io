@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
 
         {/* Right Content - Visual */}
-        <div className="relative animate-fade-in delay-300 opacity-0 [animation-fill-mode:forwards]">
+        <div className="relative">
           <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-700 aspect-[4/5] md:aspect-auto">
             <img 
               src="/images/SANIPEPLA 2.jpeg" 
@@ -47,14 +47,14 @@ export default function Hero() {
               className="w-full h-full object-cover scale-105" 
             />
             {/* Impact Overlay */}
-            <div className="absolute bottom-8 left-8 right-8 glass-card p-6 animate-fade-in-up delay-700 opacity-0 [animation-fill-mode:forwards]">
+            <div className="absolute bottom-8 left-8 right-8 glass-card p-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-sanipepla-indigo flex items-center justify-center text-white shrink-0">
                   <Play className="w-5 h-5 fill-current" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-sanipepla-indigo uppercase tracking-wider">Our Vision</p>
-                  <p className="text-sm text-slate-700 font-medium">Transforming waste into value.</p>
+                  <p className="text-sm text-slate-700 font-medium">Sanitation for people, solutions for planet</p>
                 </div>
               </div>
             </div>
