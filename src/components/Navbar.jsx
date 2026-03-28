@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Heart, Globe, Droplets, Users } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -42,7 +41,7 @@ export default function Navbar() {
               SANIPEPLA
             </span>
             <span className="text-[10px] font-medium tracking-[0.2em] text-sanipepla-mauve uppercase mt-1">
-              Sanitation. People. Planet.
+              Sanitation, people, planet
             </span>
           </div>
         </a>
@@ -61,48 +60,34 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Action Button */}
-        <div className="flex items-center gap-4">
-          <Button
-            className="hidden md:flex bg-sanipepla-indigo hover:bg-sanipepla-indigo/90 text-white px-8 rounded-full shadow-lg shadow-sanipepla-indigo/20 transition-all hover:scale-105"
-          >
-            <Heart className="w-4 h-4 mr-2 fill-white/20" />
-            Get Involved
-          </Button>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden p-2 text-sanipepla-indigo"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X /> : <Menu />}
-          </button>
-        </div>
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden p-2 text-sanipepla-indigo"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
         className={cn(
           "fixed inset-0 top-0 bg-white/95 backdrop-blur-xl z-40 transition-transform duration-500 md:hidden flex flex-col items-center justify-center gap-8",
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        {navLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.href}
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-2xl font-semibold text-sanipepla-indigo hover:text-sanipepla-mauve transition-colors"
-          >
-            {link.name}
-          </a>
-        ))}
-        <Button
-          className="bg-sanipepla-indigo text-white px-10 py-6 text-lg rounded-full"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          Get Involved
-        </Button>
+        <div className="flex flex-col items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-semibold text-sanipepla-indigo hover:text-sanipepla-mauve transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
       </div>
     </nav>
   );

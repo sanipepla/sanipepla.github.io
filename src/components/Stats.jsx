@@ -1,78 +1,76 @@
 import React from "react";
-import { Globe2, Droplets, Users2, BarChart3 } from "lucide-react";
+import { Users2, AlertCircle, Droplets, Trash2 } from "lucide-react";
 
 const stats = [
-  { 
-    value: "3.5Bn", 
-    label: "People lack safely managed sanitation", 
-    icon: Globe2,
-    description: "A global crisis affecting health and dignity."
-  },
-  { 
-    value: "8%", 
-    label: "Practice open defecation", 
+  {
+    number: "3.5Bn",
+    label: "People lack access to safely managed sanitation services",
     icon: Users2,
-    description: "Leading to preventable disease and environmental harm."
+    color: "bg-blue-50 text-blue-600",
   },
-  { 
-    value: "57%", 
-    label: "Urban toilet services gap", 
-    icon: BarChart3,
-    description: "Rapid urbanization outpaces current infrastructure."
+  {
+    number: "8%",
+    label: "Of the global population practices open defecation",
+    icon: AlertCircle,
+    color: "bg-red-50 text-red-600",
   },
-  { 
-    value: "14L", 
-    label: "Water wasted per flush", 
+  {
+    number: "57%",
+    label: "Of urban dwellers lack access to toilets that provide a full sanitation service",
+    icon: Trash2,
+    color: "bg-orange-50 text-orange-600",
+  },
+  {
+    number: "14L",
+    label: "Of clean water is wasted by traditional toilets per flush",
     icon: Droplets,
-    description: "Traditional systems are draining our most precious resource."
+    color: "bg-cyan-50 text-cyan-600",
   },
 ];
 
 export default function Stats() {
   return (
-    <section id="stats" className="section-spacing bg-white relative overflow-hidden">
+    <section id="stats" className="section-spacing bg-slate-50 relative overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none select-none">
+        <svg width="100%" height="100%" viewBox="0 0 100 100">
+          <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in-up">
-          <h2 className="text-sm font-bold tracking-[0.2em] text-sanipepla-mauve uppercase mb-4">
-            The Magnitude of the Challenge
+        <div className="max-w-3xl mx-auto text-center mb-20 space-y-4 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+            Our Current State: <span className="text-sanipepla-indigo underline decoration-sanipepla-mauve/30">Challenge</span>
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-            Why We <span className="text-sanipepla-indigo underline decoration-sanipepla-mauve/30">Innovate</span>
-          </h3>
-          <p className="mt-6 text-xl text-slate-500 font-light leading-relaxed">
-            Access to safely managed sanitation is a fundamental human right. 
-            Yet, the current global systems are failing both people and the planet.
-          </p>
+          <div className="w-20 h-1.5 bg-sanipepla-mauve rounded-full mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <div 
               key={i} 
-              className="organic-card p-10 flex flex-col items-center text-center group"
+              className="organic-card p-10 flex flex-col items-center text-center space-y-6 hover:-translate-y-2 transition-all duration-500 animate-fade-in-up" 
+              style={{ animationDelay: `${i * 150}ms` }}
             >
-              <div className="mb-8 p-4 rounded-2xl bg-slate-50 text-sanipepla-indigo group-hover:bg-sanipepla-indigo group-hover:text-white transition-all duration-500 shadow-inner">
-                <stat.icon className="w-10 h-10" />
+              <div className={`w-16 h-16 rounded-2xl ${stat.color} flex items-center justify-center shadow-inner`}>
+                <stat.icon className="w-8 h-8" />
               </div>
-              
-              <div className="space-y-3">
-                <span className="text-5xl font-black text-slate-900 block tracking-tighter">
-                  {stat.value}
+              <div className="space-y-2">
+                <span className="text-4xl md:text-5xl font-bold text-slate-900 block tracking-tighter tabular-nums">
+                  {stat.number}
                 </span>
-                <span className="text-[15px] font-bold text-sanipepla-mauve uppercase tracking-wider block">
+                <p className="text-slate-500 text-sm font-medium leading-relaxed max-w-[180px] mx-auto">
                   {stat.label}
-                </span>
-                <p className="text-sm text-slate-500 font-medium leading-relaxed">
-                  {stat.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      
-      {/* Subtle Background Decoration */}
-      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent" />
     </section>
   );
 }
